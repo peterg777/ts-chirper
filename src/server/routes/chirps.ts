@@ -1,5 +1,5 @@
 import * as express from 'express';
-import * as chirpStore from './chirpstore';
+import  chirpStore from '../utils/chirpstore';
 let router = express.Router();
 //get request
 router.get('/:id?', (req, res) => {
@@ -13,6 +13,7 @@ router.get('/:id?', (req, res) => {
 //post request
 router.post('/', (req, res) => {
     chirpStore.CreateChirp(req.body);
+    console.log(req.body);
     res.sendStatus(201);
 });
 // put request
