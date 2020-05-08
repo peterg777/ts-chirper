@@ -7,7 +7,17 @@ router.get('/:id?', (req, res) => {
     if (id) {
         res.json(chirpStore.GetChirp(id));
     } else {
-    res.json(chirpStore.GetChirps());
+       const data = chirpStore.GetChirps()
+       const chirps = Object.keys(data).map(key=> {
+           return{
+               id:key,
+               user: data[key].user,
+               message: data[key].message
+
+           }
+       })
+       chirps.pop()
+    res.json(chirps);
     }
 });
 //post request
