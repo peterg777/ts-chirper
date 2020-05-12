@@ -1,5 +1,5 @@
 import * as express from 'express';
-import  chirpStore from '../utils/chirpstore';
+import chirpStore from '../utils/chirpstore';
 let router = express.Router();
 //get request
 router.get('/:id?', (req, res) => {
@@ -7,17 +7,17 @@ router.get('/:id?', (req, res) => {
     if (id) {
         res.json(chirpStore.GetChirp(id));
     } else {
-       const data = chirpStore.GetChirps()
-       const chirps = Object.keys(data).map(key=> {
-           return{
-               id:key,
-               user: data[key].user,
-               message: data[key].message
+        const data = chirpStore.GetChirps()
+        const chirps = Object.keys(data).map(key => {
+            return {
+                id: key,
+                user: data[key].user,
+                message: data[key].message
 
-           }
-       })
-       chirps.pop()
-    res.json(chirps);
+            }
+        })
+        chirps.pop()
+        res.json(chirps);
     }
 });
 //post request

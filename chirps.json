@@ -1,1 +1,19 @@
-{"3":{"user":"peter","message":"please work!"},"4":{"user":"peter","message":"please work!"},"5":{"user":"peter","message":"please work!"},"6":{"user":"peter","message":"please work!"},"nextid":7}
+{
+    "3": {
+        "user": "peter",
+        "message": "please work!"
+    },
+    "4": {
+        "user": "peter",
+        "message": "please work!"
+    },
+    "5": {
+        "user": "peter",
+        "message": "please work!"
+    },
+    "6": {
+        "user": "peter",
+        "message": "please work!"
+    },
+    "nextid": 7
+}

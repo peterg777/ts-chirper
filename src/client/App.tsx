@@ -1,35 +1,38 @@
 import * as React from 'react';
-class App extends React.Component<IAppProps, IAppState> {
-	constructor(props: IAppProps) {
-		super(props);
-		this.state = {
-			name: null
-		};
-	}
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import HomePage from './component/HomePage';
+import DetailsPage from './component/DetailsPage';
+import NavBar from './component/Navbar';
+import EditButton from './component/Editchirp';
 
-	async componentDidMount() {
-		try {
-			let r = await fetch('/api/hello');
-			let name = await r.json();
-			this.setState({ name });
-		} catch (error) {
-			console.log(error);
-		}
-	}
+
+
+
+
+class App extends React.Component<IAppProps, IAppState> {
+
+
+
 
 	render() {
 		return (
-			<main className="container my-5">
-				<h1 className="text-danger text-center">Hello {this.state.name}!</h1>
-			</main>
+			<BrowserRouter>
+				<NavBar />
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route exact path="/details/:id" component={DetailsPage} />
+					<Route exact path="/chirp/edit/:id" component={EditButton} />
+					
+
+				</Switch>
+			</BrowserRouter>
+
 		);
 	}
 }
 
-export interface IAppProps {}
+export interface IAppProps { }
 
-export interface IAppState {
-	name: string;
-}
+export interface IAppState { }
 
 export default App;
