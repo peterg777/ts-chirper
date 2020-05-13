@@ -18,5 +18,5 @@ class Navbar extends React.Component<INavbarProps, INavbarState> {
 
 export default Navbar
 
-interface INavbarProps { }
-interface INavbarState { }
+interface INavbarProps {}
+interface INavbarState {}
