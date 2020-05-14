@@ -15,5 +15,25 @@
         "user": "peter",
         "message": "please work!"
     },
-    "nextid": 7
+    "7": {
+        "name": "monty",
+        "message": "lovely"
+    },
+    "8": {
+        "name": "monty",
+        "message": "lalalala"
+    },
+    "9": {
+        "name": "monty",
+        "message": "lovely"
+    },
+    "10": {
+        "name": "monty",
+        "message": "lovely"
+    },
+    "11": {
+        "name": "luke",
+        "message": "is out today!"
+    },
+    "nextid": 12
 }
