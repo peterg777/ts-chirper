@@ -5,6 +5,9 @@ class Details extends React.Component<DetailsProps, DetailsState> {
   constructor(props: DetailsProps) {
     super(props);
     this.state = {
+        id:this.props.match.params.id,
+        name:'',
+        message:'',
         chirps: []
     }
 }
@@ -56,8 +59,8 @@ render() {
 
 
 interface DetailsProps extends RouteComponentProps<{id:string}> {}
-interface DetailsState {
-id:string
+interface DetailsState {   
+id:string,
 name: string,
 message: string
 }

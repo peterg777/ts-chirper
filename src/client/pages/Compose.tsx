@@ -5,6 +5,7 @@ class Compose extends React.Component<ComposeProps, ComposeState>{
     constructor(props: ComposeProps) {
         super(props); {
             this.state={
+                id:this.props.match.params.id,
                 name:'',
                 message: ''
             }
@@ -47,12 +48,10 @@ class Compose extends React.Component<ComposeProps, ComposeState>{
 
 
 export default Compose
-interface ComposeProps extends RouteComponentProps {
-    name: string,
-    message: string
-}
+interface ComposeProps extends RouteComponentProps <{id:string}> {}
 
 interface ComposeState {
+    id:string,
     name: string,
     message: string
 }
